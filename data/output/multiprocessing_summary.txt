@@ -1,0 +1,24 @@
+Proces 0:
+  Œrednia odleg³oœæ: 3.63 mil
+  £¹czny napiwek: $2337199.11
+  Liczba d³ugich kursów (>10 mil): 64898
+
+Proces 1:
+  Œrednia odleg³oœæ: 3.33 mil
+  £¹czny napiwek: $2409776.09
+  Liczba d³ugich kursów (>10 mil): 56550
+
+Proces 2:
+  Œrednia odleg³oœæ: 3.13 mil
+  £¹czny napiwek: $2342289.95
+  Liczba d³ugich kursów (>10 mil): 48748
+
+Proces 3:
+  Œrednia odleg³oœæ: 3.13 mil
+  £¹czny napiwek: $2366063.66
+  Liczba d³ugich kursów (>10 mil): 47202
+
+=== Podsumowanie ogólne ===
+Œrednia odleg³oœæ (globalnie): 3.30 mil
+£¹czny napiwek (wszystko): $9455328.81
+£¹czna liczba d³ugich kursów: 217398
