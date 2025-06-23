@@ -1,10 +1,14 @@
 from core.loader import load_parquet
+from core.cleaner import clean_data
 
 if __name__ == "__main__":
     path = "data/raw/yellow_tripdata_2024-01.parquet"
-    df = load_parquet(path)
+    df_raw = load_parquet(path)
 
-    print(f"Liczba rekordów: {len(df)}")
-    print("Dostępne kolumny:")
-    print(df.columns.tolist())
-    print(df.head(5))
+    print(f"Przed czyszczeniem: {len(df_raw)} rekordów")
+
+    df_cleaned = clean_data(df_raw)
+
+    print(f"Po czyszczeniu: {len(df_cleaned)} rekordów")
+    print("Przykładowe dane:")
+    print(df_cleaned.head(5))
