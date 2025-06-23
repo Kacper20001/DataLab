@@ -4,6 +4,7 @@ from decorators.counter import count_calls
 from decorators.timer import measure_time
 from pipeline.base import BasePipeline
 from core.analyzer import analyze_data
+from core.visualizer import visualize_data
 
 
 def step(func):
@@ -33,3 +34,9 @@ class TaxiPipeline(BasePipeline):
     @count_calls
     def analyze(self):
         analyze_data(self.df)
+
+    @step
+    @measure_time
+    @count_calls
+    def visualize(self):
+        visualize_data(self.df)
