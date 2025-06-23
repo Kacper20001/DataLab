@@ -1,6 +1,9 @@
 import pandas as pd
+from decorators.timer import measure_time
+from decorators.counter import count_calls
 
-
+@measure_time
+@count_calls
 def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     """
     Czyści dane NYC Taxi z podstawowych błędów i anomalii.

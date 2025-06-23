@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d93802b0-b6d9-484e-a049-c876ca420b50" name="Changes" comment="stworzenie wstępnej struktury projektu oraz loader Parquet z walidacją danych NYC Taxi">
+    <list default="true" id="d93802b0-b6d9-484e-a049-c876ca420b50" name="Changes" comment="czyszczenie danych NYC Taxi w cleaner.py">
+      <change afterPath="$PROJECT_DIR$/decorators/timer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/cleaner.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/cleaner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/decorators/counter.py" beforeDir="false" afterPath="$PROJECT_DIR$/decorators/counter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/decorators/timing.py" beforeDir="false" afterPath="$PROJECT_DIR$/decorators/__init__.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1750698015483</updated>
-      <workItem from="1750698016406" duration="6730000" />
+      <workItem from="1750698016406" duration="7267000" />
     </task>
     <task id="LOCAL-00001" summary="stworzenie wstępnej struktury projektu oraz loader Parquet z walidacją danych NYC Taxi">
       <option name="closed" value="true" />
@@ -88,7 +91,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750704758439</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="czyszczenie danych NYC Taxi w cleaner.py">
+      <option name="closed" value="true" />
+      <created>1750705483565</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1750705483565</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,7 +118,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="stworzenie wstępnej struktury projektu oraz loader Parquet z walidacją danych NYC Taxi" />
-    <option name="LAST_COMMIT_MESSAGE" value="stworzenie wstępnej struktury projektu oraz loader Parquet z walidacją danych NYC Taxi" />
+    <MESSAGE value="czyszczenie danych NYC Taxi w cleaner.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="czyszczenie danych NYC Taxi w cleaner.py" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DataLab$main.coverage" NAME="main Coverage Results" MODIFIED="1750705405495" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

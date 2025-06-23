@@ -1,5 +1,7 @@
 import pandas as pd
 from typing import List
+from decorators.timer import measure_time
+from decorators.counter import count_calls
 
 
 # Lista wymaganych kolumn z danych NYC Yellow Taxi
@@ -14,7 +16,8 @@ REQUIRED_COLUMNS: List[str] = [
     "payment_type"
 ]
 
-
+@measure_time
+@count_calls
 def load_parquet(path: str) -> pd.DataFrame:
     """
     Wczytuje dane z pliku Parquet i sprawdza, czy zawierają wymagane kolumny.
