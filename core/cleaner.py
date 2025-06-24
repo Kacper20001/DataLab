@@ -1,6 +1,7 @@
-import pandas as pd
+from core.streamer import stream_parquet
 from decorators.timer import measure_time
 from decorators.counter import count_calls
+import pandas as pd
 
 @measure_time
 @count_calls
@@ -32,3 +33,17 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     df.reset_index(drop=True, inplace=True)
 
     return df
+
+@measure_time
+@count_calls
+def stream_and_clean_data(path: str, chunksize: int = 100_000):
+    """
+    Strumieniowo wczytuje i czyści dane z pliku Parquet.
+
+    :param path: Ścieżka do pliku .parquet
+    :param chunksize: Liczba wierszy na chunk
+    :yield: Oczyszczony DataFrame (chunk)
+    """
+    for chunk in stream_parquet(path, chunksize):
+        cleaned = clean_data(chunk)
+        yield cleaned
