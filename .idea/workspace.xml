@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d93802b0-b6d9-484e-a049-c876ca420b50" name="Changes" comment="Streaming data processing – implementacja stream_parquet (pyarrow)">
+    <list default="true" id="d93802b0-b6d9-484e-a049-c876ca420b50" name="Changes" comment="Implementacja streamingowej analizy danych (streaming_global_analysis) z zapisem wyników i logowaniem chunków">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/analyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/analyzer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipeline/taxi_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/pipeline/taxi_pipeline.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +79,7 @@
       <option name="presentableId" value="Default" />
       <updated>1750698015483</updated>
       <workItem from="1750698016406" duration="16603000" />
-      <workItem from="1750759780321" duration="1837000" />
+      <workItem from="1750759780321" duration="2653000" />
     </task>
     <task id="LOCAL-00001" summary="stworzenie wstępnej struktury projektu oraz loader Parquet z walidacją danych NYC Taxi">
       <option name="closed" value="true" />
@@ -147,7 +145,23 @@
       <option name="project" value="LOCAL" />
       <updated>1750761213230</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Implementacja streamingowej analizy danych (streaming_global_analysis) z zapisem wyników i logowaniem chunków">
+      <option name="closed" value="true" />
+      <created>1750761790538</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1750761790538</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Implementacja streamingowej analizy danych (streaming_global_analysis) z zapisem wyników i logowaniem chunków">
+      <option name="closed" value="true" />
+      <created>1750761799286</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1750761799286</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,10 +187,11 @@
     <MESSAGE value="Wizualizacja danych – dodano 5 wykresów:&#10;&#10;- Histogram długości trasy (ograniczenie do 30 mil)&#10;- Średni napiwek względem liczby pasażerów&#10;- Rozrzut wartości napiwków (boxplot do 15$)&#10;- Korelacja całkowitej kwoty z napiwkiem (scatter)&#10;- Heatmapa: liczba pasażerów vs średnia długość trasy&#10;&#10;Wykresy zapisane w `data/output/`, opatrzone tytułami i etykietami, dopasowane do danych i ograniczeń (m.in. usunięcie ekstremalnych wartości)." />
     <MESSAGE value=" Utworzono moduł multiprocessing – podział danych, przetwarzanie równoległe, logi i podsumowanie (stdout + TXT)" />
     <MESSAGE value="Streaming data processing – implementacja stream_parquet (pyarrow)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Streaming data processing – implementacja stream_parquet (pyarrow)" />
+    <MESSAGE value="Implementacja streamingowej analizy danych (streaming_global_analysis) z zapisem wyników i logowaniem chunków" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementacja streamingowej analizy danych (streaming_global_analysis) z zapisem wyników i logowaniem chunków" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/DataLab$main.coverage" NAME="main Coverage Results" MODIFIED="1750761007920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DataLab$main.coverage" NAME="main Coverage Results" MODIFIED="1750761672469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DataLab$visualizer.coverage" NAME="visualizer Coverage Results" MODIFIED="1750709833575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/DataLab$multiprocessor.coverage" NAME="multiprocessor Coverage Results" MODIFIED="1750714794194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/processing" />
   </component>
