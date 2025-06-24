@@ -8,7 +8,7 @@ def profile_cpu(func, filename="cpu_profile.prof"):
 
     profiler = cProfile.Profile()
     profiler.enable()
-    func()  # wywołaj faktycznie funkcję (a nie przez exec)
+    func()
     profiler.disable()
     profiler.dump_stats(output_path)
 

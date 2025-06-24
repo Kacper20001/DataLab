@@ -1,14 +1,19 @@
 import pyarrow.parquet as pq
+import pyarrow as pa
 
-def stream_parquet(path: str, batch_size: int = 100_000):
+
+def stream_parquet(path, chunksize=100_000, columns=None):
     """
-    Strumieniowo wczytuje dane z pliku Parquet w partiach (batchach).
+    Generator zwracający kolejne chanki z pliku Parquet.
 
-    :param path: Ścieżka do pliku .parquet
-    :param batch_size: Liczba wierszy na batch
-    :yield: Kolejny fragment danych jako DataFrame
+    Parameters:
+        path (str): Ścieżka do pliku Parquet
+        chunksize (int): Rozmiar chanka (liczba wierszy)
+        columns (list[str]): Lista kolumn do załadowania (opcjonalna)
+
+    Yields:
+        pd.DataFrame: kolejny fragment danych
     """
     parquet_file = pq.ParquetFile(path)
-
-    for batch in parquet_file.iter_batches(batch_size=batch_size):
-        yield batch.to_pandas()
+    for batch in parquet_file.iter_batches(batch_size=chunksize, columns=columns):
+        yield pa.Table.from_batches(batches=[batch]).to_pandas()

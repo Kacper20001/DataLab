@@ -2,6 +2,13 @@ from core.streamer import stream_parquet
 from decorators.timer import measure_time
 from decorators.counter import count_calls
 import pandas as pd
+import psutil
+
+NEEDED_COLUMNS = [
+    "passenger_count", "trip_distance", "tip_amount",
+    "total_amount", "tpep_pickup_datetime", "tpep_dropoff_datetime"
+]
+
 
 @measure_time
 @count_calls
@@ -44,6 +51,8 @@ def stream_and_clean_data(path: str, chunksize: int = 100_000):
     :param chunksize: Liczba wierszy na chunk
     :yield: Oczyszczony DataFrame (chunk)
     """
-    for chunk in stream_parquet(path, chunksize):
+    for chunk in stream_parquet(path, chunksize=chunksize, columns=NEEDED_COLUMNS):
         cleaned = clean_data(chunk)
+        mem = psutil.Process().memory_info().rss / 1024 ** 2
+        print(f"[Cleaner] Aktualne zużycie pamięci: {mem:.2f} MB")
         yield cleaned
