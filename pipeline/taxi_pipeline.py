@@ -1,12 +1,13 @@
 from core.loader import load_parquet
 from core.cleaner import clean_data
-from core.analyzer import analyze_data
 from core.visualizer import visualize_data
 from processing.multiprocessor import run_multiprocessing
 from decorators.counter import count_calls
 from decorators.timer import measure_time
 from pipeline.base import BasePipeline
 import os
+from core.analyzer import streaming_global_analysis
+
 
 
 def step(func):
@@ -34,8 +35,8 @@ class TaxiPipeline(BasePipeline):
     @step
     @measure_time
     @count_calls
-    def analyze(self):
-        analyze_data(self.df)
+    def streaming_analyze(self):
+        streaming_global_analysis(self.file_path)
 
     @step
     @measure_time

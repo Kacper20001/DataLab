@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d93802b0-b6d9-484e-a049-c876ca420b50" name="Changes" comment=" Utworzono moduł multiprocessing – podział danych, przetwarzanie równoległe, logi i podsumowanie (stdout + TXT)">
+    <list default="true" id="d93802b0-b6d9-484e-a049-c876ca420b50" name="Changes" comment="Streaming data processing – implementacja stream_parquet (pyarrow)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/cleaner.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/cleaner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/metaprogramming/registry.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/streamer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/analyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/analyzer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipeline/taxi_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/pipeline/taxi_pipeline.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +81,7 @@
       <option name="presentableId" value="Default" />
       <updated>1750698015483</updated>
       <workItem from="1750698016406" duration="16603000" />
-      <workItem from="1750759780321" duration="1325000" />
+      <workItem from="1750759780321" duration="1837000" />
     </task>
     <task id="LOCAL-00001" summary="stworzenie wstępnej struktury projektu oraz loader Parquet z walidacją danych NYC Taxi">
       <option name="closed" value="true" />
@@ -140,7 +139,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750715754821</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Streaming data processing – implementacja stream_parquet (pyarrow)">
+      <option name="closed" value="true" />
+      <created>1750761213230</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1750761213230</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,7 +172,8 @@
     <MESSAGE value=" Dodano moduł analizy danych core/analyzer.py. Funkcja analyze_data oblicza statystyki: liczba rekordów, średnia długość trasy, średni napiwek, łączna kwota opłat, suma pasażerów i średnia liczba pasażerów na kurs. Wyniki zapisywane do data/output/summary.txt. Zintegrowano z pipeline (metoda analyze)." />
     <MESSAGE value="Wizualizacja danych – dodano 5 wykresów:&#10;&#10;- Histogram długości trasy (ograniczenie do 30 mil)&#10;- Średni napiwek względem liczby pasażerów&#10;- Rozrzut wartości napiwków (boxplot do 15$)&#10;- Korelacja całkowitej kwoty z napiwkiem (scatter)&#10;- Heatmapa: liczba pasażerów vs średnia długość trasy&#10;&#10;Wykresy zapisane w `data/output/`, opatrzone tytułami i etykietami, dopasowane do danych i ograniczeń (m.in. usunięcie ekstremalnych wartości)." />
     <MESSAGE value=" Utworzono moduł multiprocessing – podział danych, przetwarzanie równoległe, logi i podsumowanie (stdout + TXT)" />
-    <option name="LAST_COMMIT_MESSAGE" value=" Utworzono moduł multiprocessing – podział danych, przetwarzanie równoległe, logi i podsumowanie (stdout + TXT)" />
+    <MESSAGE value="Streaming data processing – implementacja stream_parquet (pyarrow)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Streaming data processing – implementacja stream_parquet (pyarrow)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DataLab$main.coverage" NAME="main Coverage Results" MODIFIED="1750761007920" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

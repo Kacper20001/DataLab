@@ -1,24 +1,50 @@
-from decorators.counter import count_calls
+from core.cleaner import stream_and_clean_data
 from decorators.timer import measure_time
+from decorators.counter import count_calls
+import os
 
-@count_calls
 @measure_time
-def analyze_data(df):
+@count_calls
+def streaming_global_analysis(path: str, chunksize: int = 100_000):
     """
-    Analizuje podstawowe statystyki z danych NYC Yellow Taxi.
+    Strumieniowa analiza danych NYC Yellow Taxi z agregacją globalną.
     """
+
+    total_rows = 0
+    total_distance = 0.0
+    total_tip = 0.0
+    total_amount = 0.0
+    total_passengers = 0
+    long_trips = 0
+
+    for i, chunk in enumerate(stream_and_clean_data(path, chunksize=chunksize)):
+        total_rows += len(chunk)
+        total_distance += chunk["trip_distance"].sum()
+        total_tip += chunk["tip_amount"].sum()
+        total_amount += chunk["total_amount"].sum()
+        total_passengers += chunk["passenger_count"].sum()
+        long_trips += (chunk["trip_distance"] > 10).sum()
+
+        print(f"[Chunk {i+1}] Wierszy: {len(chunk)}")
+
+    if total_rows == 0:
+        print("[Analyzer] Brak danych do analizy.")
+        return
+
     results = {
-        "Liczba rekordów": len(df),
-        "Średnia długość trasy (mile)": round(df["trip_distance"].mean(), 2),
-        "Średni napiwek ($)": round(df["tip_amount"].mean(), 2),
-        "Łączna kwota opłat ($)": round(df["total_amount"].sum(), 2),
-        "Liczba pasażerów (łącznie)": int(df["passenger_count"].sum()),
-        "Średnia liczba pasażerów na kurs": round(df["passenger_count"].mean(), 2),
+        "Liczba rekordów": total_rows,
+        "Średnia długość trasy (mile)": round(total_distance / total_rows, 2),
+        "Średni napiwek ($)": round(total_tip / total_rows, 2),
+        "Łączna kwota opłat ($)": round(total_amount, 2),
+        "Liczba pasażerów (łącznie)": int(total_passengers),
+        "Średnia liczba pasażerów na kurs": round(total_passengers / total_rows, 2),
+        "Liczba długich kursów (>10 mil)": long_trips,
     }
 
-    output_path = "data/output/summary.txt"
+    os.makedirs("data/output", exist_ok=True)
+    output_path = "data/output/stream_summary.txt"
     with open(output_path, "w", encoding="utf-8") as f:
         for k, v in results.items():
             f.write(f"{k}: {v}\n")
 
-    print("\n[Analyzer] Wyniki analizy zapisane do:", output_path)
+    print(f"\n[Analyzer] Strumieniowa analiza zakończona. Wyniki zapisane w {output_path}")
