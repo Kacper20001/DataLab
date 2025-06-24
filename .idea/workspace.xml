@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d93802b0-b6d9-484e-a049-c876ca420b50" name="Changes" comment=" Synchronizacja i współdzielony stan w multiprocessing (run_multiprocessing, shared_results, lock) oraz usunięcie obecnie nieużywanych plików i folderów.">
-      <change afterPath="$PROJECT_DIR$/core/parallel.py" afterDir="false" />
+    <list default="true" id="d93802b0-b6d9-484e-a049-c876ca420b50" name="Changes" comment="-Zastąpiono ręczne tworzenie procesów multiprocessing użyciem multiprocessing.Pool&#10;-Uproszczono i zoptymalizowano kod dla równoległego przetwarzania danych chunkami&#10;-Zmieniono metodę parallel_analysis w TaxiPipeline, aby używała nowej wersji run_multiprocessing z Pool&#10;-Poprawiono błąd w odwołaniu do self.path → self.file_path">
+      <change afterPath="$PROJECT_DIR$/core/profiling/profiler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/summary.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/visualizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/visualizer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pipeline/taxi_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/pipeline/taxi_pipeline.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/processing/multiprocessor.py" beforeDir="false" afterPath="$PROJECT_DIR$/processing/multiprocessor.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +82,7 @@
       <option name="presentableId" value="Default" />
       <updated>1750698015483</updated>
       <workItem from="1750698016406" duration="16603000" />
-      <workItem from="1750759780321" duration="6994000" />
+      <workItem from="1750759780321" duration="13747000" />
     </task>
     <task id="LOCAL-00001" summary="stworzenie wstępnej struktury projektu oraz loader Parquet z walidacją danych NYC Taxi">
       <option name="closed" value="true" />
@@ -174,7 +172,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750762664139</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="-Zastąpiono ręczne tworzenie procesów multiprocessing użyciem multiprocessing.Pool&#10;-Uproszczono i zoptymalizowano kod dla równoległego przetwarzania danych chunkami&#10;-Zmieniono metodę parallel_analysis w TaxiPipeline, aby używała nowej wersji run_multiprocessing z Pool&#10;-Poprawiono błąd w odwołaniu do self.path → self.file_path">
+      <option name="closed" value="true" />
+      <created>1750767132032</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1750767132032</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,10 +208,11 @@
     <MESSAGE value="Streaming data processing – implementacja stream_parquet (pyarrow)" />
     <MESSAGE value="Implementacja streamingowej analizy danych (streaming_global_analysis) z zapisem wyników i logowaniem chunków" />
     <MESSAGE value=" Synchronizacja i współdzielony stan w multiprocessing (run_multiprocessing, shared_results, lock) oraz usunięcie obecnie nieużywanych plików i folderów." />
-    <option name="LAST_COMMIT_MESSAGE" value=" Synchronizacja i współdzielony stan w multiprocessing (run_multiprocessing, shared_results, lock) oraz usunięcie obecnie nieużywanych plików i folderów." />
+    <MESSAGE value="-Zastąpiono ręczne tworzenie procesów multiprocessing użyciem multiprocessing.Pool&#10;-Uproszczono i zoptymalizowano kod dla równoległego przetwarzania danych chunkami&#10;-Zmieniono metodę parallel_analysis w TaxiPipeline, aby używała nowej wersji run_multiprocessing z Pool&#10;-Poprawiono błąd w odwołaniu do self.path → self.file_path" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Zastąpiono ręczne tworzenie procesów multiprocessing użyciem multiprocessing.Pool&#10;-Uproszczono i zoptymalizowano kod dla równoległego przetwarzania danych chunkami&#10;-Zmieniono metodę parallel_analysis w TaxiPipeline, aby używała nowej wersji run_multiprocessing z Pool&#10;-Poprawiono błąd w odwołaniu do self.path → self.file_path" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/DataLab$main.coverage" NAME="main Coverage Results" MODIFIED="1750763443368" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DataLab$main.coverage" NAME="main Coverage Results" MODIFIED="1750786891470" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/DataLab$visualizer.coverage" NAME="visualizer Coverage Results" MODIFIED="1750709833575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/DataLab$multiprocessor.coverage" NAME="multiprocessor Coverage Results" MODIFIED="1750714794194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/processing" />
   </component>

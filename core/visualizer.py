@@ -14,7 +14,6 @@ def visualize_data(df):
     """
     os.makedirs("data/output", exist_ok=True)
 
-    # ─────────────────────────────────────────────
     # Histogram długości trasy (do 30 mil)
     filtered_df = df[df["trip_distance"] <= 30]
 
@@ -27,7 +26,6 @@ def visualize_data(df):
     plt.savefig("data/output/trip_distance_hist_filtered.png")
     plt.close()
 
-    # ─────────────────────────────────────────────
     # Średni napiwek względem liczby pasażerów (tylko 1-6)
     df_tip = df[df["passenger_count"].between(1, 6)]
     tip_by_passengers = df_tip.groupby("passenger_count")["tip_amount"].mean()
@@ -41,20 +39,19 @@ def visualize_data(df):
     plt.savefig("data/output/tip_by_passenger_count_filtered.png")
     plt.close()
 
-    # ─────────────────────────────────────────────
     # Boxplot napiwków (do 15$)
     df_tip30 = df[df["tip_amount"] <= 15]
 
     plt.figure(figsize=(10, 6))
-    sns.boxplot(data=df_tip30[["tip_amount"]], orient="h", color="white", linewidth=1.5, fliersize=1, boxprops=dict(facecolor='lightblue'))
+    sns.boxplot(data=df_tip30[["tip_amount"]], orient="h", color="white",
+                linewidth=1.5, fliersize=1, boxprops=dict(facecolor='lightblue'))
     plt.title("Rozrzut wartości napiwków (do 15$)")
     plt.xlabel("Wartość napiwku ($)")
     plt.tight_layout()
     plt.savefig("data/output/tip_amount_boxplot.png")
     plt.close()
 
-    # ─────────────────────────────────────────────
-    #  Scatter: całkowita kwota vs napiwek (do 100$)
+    # Scatter: całkowita kwota vs napiwek (do 100$)
     df_scatter = df[(df["total_amount"] <= 100) & (df["tip_amount"] <= 30)]
 
     plt.figure(figsize=(10, 6))
@@ -66,7 +63,6 @@ def visualize_data(df):
     plt.savefig("data/output/tip_vs_total_scatter.png")
     plt.close()
 
-    # ─────────────────────────────────────────────
     # Heatmapa średniej długości trasy vs liczba pasażerów (1–6)
     df_heat = df[df["passenger_count"].between(1, 6)]
     pivot = df_heat.pivot_table(index="passenger_count", values="trip_distance", aggfunc="mean")
@@ -81,3 +77,26 @@ def visualize_data(df):
     plt.close()
 
     print("[Visualizer] Wykresy zapisane do folderu: data/output/")
+
+
+@count_calls
+@measure_time
+def plot_memory_usage(memlog_path: str):
+    """
+    Wyświetla wykres zużycia pamięci na podstawie pliku .memlog
+
+    Parameters:
+        memlog_path (str): Ścieżka do pliku z danymi zużycia pamięci (MB).
+    """
+    with open(memlog_path) as f:
+        data = [float(line.strip()) for line in f]
+
+    plt.figure(figsize=(10, 6))
+    plt.plot(data, color="red", linewidth=1)
+    plt.title("Zużycie pamięci RAM podczas analizy strumieniowej")
+    plt.xlabel("Czas (x0.1s)")
+    plt.ylabel("Pamięć (MB)")
+    plt.grid(True)
+    plt.tight_layout()
+    plt.savefig("data/output/memory_usage_plot.png")
+    plt.show()
