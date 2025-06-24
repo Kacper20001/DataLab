@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d93802b0-b6d9-484e-a049-c876ca420b50" name="Changes" comment=" Profilowanie CPU i pamięci + wykres zużycia RAM">
+    <list default="true" id="d93802b0-b6d9-484e-a049-c876ca420b50" name="Changes" comment="Obsługa dużych zbiorów danych – kolumny + stream optymalny">
+      <change afterPath="$PROJECT_DIR$/validation/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/validation/base.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/validation/run.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/validation/validators.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/cleaner.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/cleaner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/streamer.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/streamer.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +84,7 @@
       <option name="presentableId" value="Default" />
       <updated>1750698015483</updated>
       <workItem from="1750698016406" duration="16603000" />
-      <workItem from="1750759780321" duration="14791000" />
+      <workItem from="1750759780321" duration="16680000" />
     </task>
     <task id="LOCAL-00001" summary="stworzenie wstępnej struktury projektu oraz loader Parquet z walidacją danych NYC Taxi">
       <option name="closed" value="true" />
@@ -187,7 +190,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750787788672</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Obsługa dużych zbiorów danych – kolumny + stream optymalny">
+      <option name="closed" value="true" />
+      <created>1750788699710</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1750788699710</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,7 +228,8 @@
     <MESSAGE value=" Synchronizacja i współdzielony stan w multiprocessing (run_multiprocessing, shared_results, lock) oraz usunięcie obecnie nieużywanych plików i folderów." />
     <MESSAGE value="-Zastąpiono ręczne tworzenie procesów multiprocessing użyciem multiprocessing.Pool&#10;-Uproszczono i zoptymalizowano kod dla równoległego przetwarzania danych chunkami&#10;-Zmieniono metodę parallel_analysis w TaxiPipeline, aby używała nowej wersji run_multiprocessing z Pool&#10;-Poprawiono błąd w odwołaniu do self.path → self.file_path" />
     <MESSAGE value=" Profilowanie CPU i pamięci + wykres zużycia RAM" />
-    <option name="LAST_COMMIT_MESSAGE" value=" Profilowanie CPU i pamięci + wykres zużycia RAM" />
+    <MESSAGE value="Obsługa dużych zbiorów danych – kolumny + stream optymalny" />
+    <option name="LAST_COMMIT_MESSAGE" value="Obsługa dużych zbiorów danych – kolumny + stream optymalny" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DataLab$main.coverage" NAME="main Coverage Results" MODIFIED="1750787414623" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
