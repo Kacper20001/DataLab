@@ -42,5 +42,4 @@ def run_multiprocessing(df, num_processes=4):
     for p in processes:
         p.join()
 
-    # Konwersja do listy słowników
     return list(shared_results.values())
