@@ -1,5 +1,4 @@
-from core.visualizer import plot_memory_usage
+from pipeline.taxi_pipeline import TaxiPipeline
 
-if __name__ == "__main__":
-    # Wywołanie analizy pamięci na podstawie memloga
-    plot_memory_usage("data/profiling/streaming_analysis.memlog")
+pipeline = TaxiPipeline("data/raw/yellow_tripdata_2024-01.parquet")
+pipeline.run()

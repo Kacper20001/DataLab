@@ -9,7 +9,6 @@ def streaming_global_analysis(path: str, chunksize: int = 100_000):
     """
     Strumieniowa analiza danych NYC Yellow Taxi z agregacją globalną.
     """
-
     total_rows = 0
     total_distance = 0.0
     total_tip = 0.0
@@ -29,13 +28,16 @@ def streaming_global_analysis(path: str, chunksize: int = 100_000):
 
     if total_rows == 0:
         print("[Analyzer] Brak danych do analizy.")
-        return
+        return {}
+
+    average_fare = total_amount / total_rows if total_rows > 0 else 0
 
     results = {
         "Liczba rekordów": total_rows,
         "Średnia długość trasy (mile)": round(total_distance / total_rows, 2),
         "Średni napiwek ($)": round(total_tip / total_rows, 2),
         "Łączna kwota opłat ($)": round(total_amount, 2),
+        "Średnia opłata za kurs ($)": round(average_fare, 2),
         "Liczba pasażerów (łącznie)": int(total_passengers),
         "Średnia liczba pasażerów na kurs": round(total_passengers / total_rows, 2),
         "Liczba długich kursów (>10 mil)": long_trips,
@@ -48,3 +50,4 @@ def streaming_global_analysis(path: str, chunksize: int = 100_000):
             f.write(f"{k}: {v}\n")
 
     print(f"\n[Analyzer] Strumieniowa analiza zakończona. Wyniki zapisane w {output_path}")
+    return results

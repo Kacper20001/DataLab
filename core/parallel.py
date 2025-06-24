@@ -22,11 +22,11 @@ def process_chunk(chunk: pd.DataFrame) -> dict:
     }
 
 
-def run_multiprocessing(path: str, batch_size: int = 250_000):
+def run_multiprocessing(path: str, chunksize: int = 250_000):
     """Uruchamia multiprocessing przy użyciu Pool i zapisuje wynik do pliku."""
     print("[Multiprocessing] Start")
 
-    chunks = list(stream_parquet(path, batch_size=batch_size))
+    chunks = list(stream_parquet(path, chunksize=chunksize))
     with Pool(processes=cpu_count()) as pool:
         results = pool.map(process_chunk, chunks)
 

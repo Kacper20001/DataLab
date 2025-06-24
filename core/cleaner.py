@@ -6,8 +6,8 @@ import pandas as pd
 import psutil
 
 NEEDED_COLUMNS = [
-    "passenger_count", "trip_distance", "tip_amount",
-    "total_amount", "tpep_pickup_datetime", "tpep_dropoff_datetime"
+    "passenger_count", "trip_distance", "tip_amount", "total_amount",
+    "fare_amount", "tpep_pickup_datetime", "tpep_dropoff_datetime"
 ]
 
 
