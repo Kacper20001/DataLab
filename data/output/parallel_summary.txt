@@ -1,0 +1,8 @@
+Liczba rekordów: 2964624
+Średnia długość trasy (mile): 3.65
+Średni napiwek ($): 3.34
+Łączna kwota opłat ($): 79456384.28
+Średnia opłata za kurs ($): 26.8
+Liczba pasażerów (łącznie): 3782748
+Średnia liczba pasażerów na kurs: 1.28
+Liczba długich kursów (>10 mil): 228254

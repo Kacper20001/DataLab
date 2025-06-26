@@ -4,29 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d93802b0-b6d9-484e-a049-c876ca420b50" name="Changes" comment="Modułowa walidacja danych&#10;- Dodano folder validation/&#10;- Stworzono klasę bazową BaseValidator&#10;- Zaimplementowano 5 walidatorów&#10;- Podmieniono clean_data() na użycie run_all_validations()">
-      <change afterPath="$PROJECT_DIR$/core/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/core/sample_loader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_analyzer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_cleaner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_decorators.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_loader.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_validators.py" afterDir="false" />
+    <list default="true" id="d93802b0-b6d9-484e-a049-c876ca420b50" name="Changes" comment="Refaktoryzacja analyzer i cleaner + naprawa testów + uproszczenie pipeline'u&quot; -m &quot;- Zmieniono funkcję streaming_global_analysis: dodano 'Średnia opłata za kurs' i poprawiono nazwy kluczy zgodnie z testami&#10;- Poprawiono test test_clean_data: oczekuje teraz 2 poprawnych rekordów (zgodnie z logiką cleanera)&#10;- Naprawiono test test_analyzer: dopasowano klucze expected_keys do aktualnych wyników z analyzer&#10;- Usunięto nieużywany moduł core/parallel.py oraz powiązane z nim importy&#10;- Uproszczono TaxiPipeline: zostawiono tylko kroki stream preview, analiza i wizualizacja&#10;- Wszystkie testy (pytest) przechodzą: dekoratory, loader, cleaner, analyzer, walidator">
+      <change afterPath="$PROJECT_DIR$/core/loader.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/logger.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/core/pool_processor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/streamlit_app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/analyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/analyzer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/core/cleaner.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/cleaner.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/loader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/core/parallel.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/parallel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/parallel.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/profiling/profiler.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/profiling/profiler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/sample_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/sample_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/streamer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/visualizer.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/visualizer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/output/memory_usage_plot.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/output/memory_usage_plot.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/output/multiprocessing_summary.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/output/passenger_vs_distance_heatmap.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/output/passenger_vs_distance_heatmap.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/stream_summary.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/output/stream_summary.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/output/stream_summary.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/data/output/tip_amount_boxplot.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/output/tip_amount_boxplot.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/output/tip_by_passenger_count_filtered.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/output/tip_by_passenger_count_filtered.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/output/tip_vs_total_scatter.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/output/tip_vs_total_scatter.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/output/trip_distance_hist_filtered.png" beforeDir="false" afterPath="$PROJECT_DIR$/data/output/trip_distance_hist_filtered.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/profiling/streaming_analysis.memlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/profiling/streaming_analysis.prof" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/decorators/counter.py" beforeDir="false" afterPath="$PROJECT_DIR$/decorators/counter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/decorators/timer.py" beforeDir="false" afterPath="$PROJECT_DIR$/decorators/timer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipeline/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/pipeline/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pipeline/meta.py" beforeDir="false" afterPath="$PROJECT_DIR$/pipeline/meta.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pipeline/taxi_pipeline.py" beforeDir="false" afterPath="$PROJECT_DIR$/pipeline/taxi_pipeline.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/processing/multiprocessor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_analyzer.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_pool_processor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_cleaner.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_cleaner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_decorators.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_decorators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_validators.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_validators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/validation/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/validation/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/validation/run.py" beforeDir="false" afterPath="$PROJECT_DIR$/validation/validation_runner.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/validation/validators.py" beforeDir="false" afterPath="$PROJECT_DIR$/validation/validators.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,6 +86,7 @@
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;Python.multiprocessor.executor&quot;: &quot;Run&quot;,
+    &quot;Python.streamlit_app.executor&quot;: &quot;Run&quot;,
     &quot;Python.visualizer.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
@@ -85,6 +100,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kulig\PycharmProjects\DataLab" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -102,7 +122,11 @@
       <updated>1750698015483</updated>
       <workItem from="1750698016406" duration="16603000" />
       <workItem from="1750759780321" duration="20257000" />
-      <workItem from="1750794011960" duration="3534000" />
+      <workItem from="1750794011960" duration="4001000" />
+      <workItem from="1750870417456" duration="11224000" />
+      <workItem from="1750884274812" duration="1517000" />
+      <workItem from="1750885858474" duration="4676000" />
+      <workItem from="1750954193810" duration="17150000" />
     </task>
     <task id="LOCAL-00001" summary="stworzenie wstępnej struktury projektu oraz loader Parquet z walidacją danych NYC Taxi">
       <option name="closed" value="true" />
@@ -224,7 +248,15 @@
       <option name="project" value="LOCAL" />
       <updated>1750790303634</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Refaktoryzacja analyzer i cleaner + naprawa testów + uproszczenie pipeline'u&quot; -m &quot;- Zmieniono funkcję streaming_global_analysis: dodano 'Średnia opłata za kurs' i poprawiono nazwy kluczy zgodnie z testami&#10;- Poprawiono test test_clean_data: oczekuje teraz 2 poprawnych rekordów (zgodnie z logiką cleanera)&#10;- Naprawiono test test_analyzer: dopasowano klucze expected_keys do aktualnych wyników z analyzer&#10;- Usunięto nieużywany moduł core/parallel.py oraz powiązane z nim importy&#10;- Uproszczono TaxiPipeline: zostawiono tylko kroki stream preview, analiza i wizualizacja&#10;- Wszystkie testy (pytest) przechodzą: dekoratory, loader, cleaner, analyzer, walidator">
+      <option name="closed" value="true" />
+      <created>1750798884120</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1750798884120</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,11 +288,13 @@
     <MESSAGE value=" Profilowanie CPU i pamięci + wykres zużycia RAM" />
     <MESSAGE value="Obsługa dużych zbiorów danych – kolumny + stream optymalny" />
     <MESSAGE value="Modułowa walidacja danych&#10;- Dodano folder validation/&#10;- Stworzono klasę bazową BaseValidator&#10;- Zaimplementowano 5 walidatorów&#10;- Podmieniono clean_data() na użycie run_all_validations()" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modułowa walidacja danych&#10;- Dodano folder validation/&#10;- Stworzono klasę bazową BaseValidator&#10;- Zaimplementowano 5 walidatorów&#10;- Podmieniono clean_data() na użycie run_all_validations()" />
+    <MESSAGE value="Refaktoryzacja analyzer i cleaner + naprawa testów + uproszczenie pipeline'u&quot; -m &quot;- Zmieniono funkcję streaming_global_analysis: dodano 'Średnia opłata za kurs' i poprawiono nazwy kluczy zgodnie z testami&#10;- Poprawiono test test_clean_data: oczekuje teraz 2 poprawnych rekordów (zgodnie z logiką cleanera)&#10;- Naprawiono test test_analyzer: dopasowano klucze expected_keys do aktualnych wyników z analyzer&#10;- Usunięto nieużywany moduł core/parallel.py oraz powiązane z nim importy&#10;- Uproszczono TaxiPipeline: zostawiono tylko kroki stream preview, analiza i wizualizacja&#10;- Wszystkie testy (pytest) przechodzą: dekoratory, loader, cleaner, analyzer, walidator" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refaktoryzacja analyzer i cleaner + naprawa testów + uproszczenie pipeline'u&quot; -m &quot;- Zmieniono funkcję streaming_global_analysis: dodano 'Średnia opłata za kurs' i poprawiono nazwy kluczy zgodnie z testami&#10;- Poprawiono test test_clean_data: oczekuje teraz 2 poprawnych rekordów (zgodnie z logiką cleanera)&#10;- Naprawiono test test_analyzer: dopasowano klucze expected_keys do aktualnych wyników z analyzer&#10;- Usunięto nieużywany moduł core/parallel.py oraz powiązane z nim importy&#10;- Uproszczono TaxiPipeline: zostawiono tylko kroki stream preview, analiza i wizualizacja&#10;- Wszystkie testy (pytest) przechodzą: dekoratory, loader, cleaner, analyzer, walidator" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/DataLab$main.coverage" NAME="main Coverage Results" MODIFIED="1750797491836" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/DataLab$visualizer.coverage" NAME="visualizer Coverage Results" MODIFIED="1750709833575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
+    <SUITE FILE_PATH="coverage/DataLab$main.coverage" NAME="main Coverage Results" MODIFIED="1750972157358" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/DataLab$visualizer.coverage" NAME="visualizer Coverage Results" MODIFIED="1750885761810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/core" />
     <SUITE FILE_PATH="coverage/DataLab$multiprocessor.coverage" NAME="multiprocessor Coverage Results" MODIFIED="1750714794194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/processing" />
+    <SUITE FILE_PATH="coverage/DataLab$streamlit_app.coverage" NAME="streamlit_app Coverage Results" MODIFIED="1750880880323" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/streamlit" />
   </component>
 </project>

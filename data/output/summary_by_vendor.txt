@@ -1,0 +1,7 @@
+Podsumowanie per VendorID:
+         fare_amount          tip_amount        trip_distance           
+                mean      max       mean    max          mean        max
+VendorID                                                                
+1          17.639553  5000.00   2.999248  428.0      2.974737     971.80
+2          18.346593  2221.30   3.446184  422.7      3.872493  312722.30
+6          46.899346   100.73   0.000000    0.0     11.346846      29.48
