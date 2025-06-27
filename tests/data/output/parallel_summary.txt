@@ -1,0 +1,8 @@
+Liczba rekordów: 0
+Średnia długość trasy (mile): 0
+Średni napiwek ($): 0
+Łączna kwota opłat ($): 0.0
+Średnia opłata za kurs ($): 0
+Liczba pasażerów (łącznie): 0
+Średnia liczba pasażerów na kurs: 0
+Liczba długich kursów (>10 mil): 0

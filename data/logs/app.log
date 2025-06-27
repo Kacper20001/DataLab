@@ -44,3 +44,171 @@
 [2025-06-27 00:34:14][INFO] [Cleaner] Chunk: 100000 → 96166 rekordów po walidacji | RAM: 1207.88 MB
 [2025-06-27 00:34:15][INFO] Pipeline zakończony pomyślnie.
 [2025-06-27 00:34:15][INFO] Odpalam Streamlit...
+[2025-06-27 15:28:56][INFO] [Cleaner] Chunk: 1 → 1 rekordów po walidacji | RAM: 88.85 MB
+[2025-06-27 15:28:56][INFO] [Cleaner] Chunk: 5 → 1 rekordów po walidacji | RAM: 88.98 MB
+[2025-06-27 15:28:56][INFO] [Cleaner] Chunk: 1 → 0 rekordów po walidacji | RAM: 89.03 MB
+[2025-06-27 15:28:56][ERROR] [Cleaner] Błąd podczas czyszczenia chunku: Can only use .dt accessor with datetimelike values
+[2025-06-27 15:28:56][INFO] [Loader] Wczytano 2964624 wierszy z pliku: data/raw/yellow_tripdata_2024-01.parquet
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 1 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 2 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 3 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 4 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 5 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 6 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 7 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 8 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 9 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 10 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 11 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 12 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 13 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 14 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 15 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 16 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 17 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 18 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 19 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 20 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 21 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 22 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 23 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 24 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 25 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 26 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 27 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 28 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 29 załadowany (100000 wierszy)
+[2025-06-27 15:28:56][INFO] [Loader] Chunk 30 załadowany (64624 wierszy)
+[2025-06-27 15:28:56][ERROR] [Loader] Błąd podczas wczytywania pliku data/raw/fake_file.parquet: [Errno 2] No such file or directory: 'data/raw/fake_file.parquet'
+[2025-06-27 15:28:56][INFO] [Loader] Wczytano 0 wierszy z pliku: fake_path.parquet
+[2025-06-27 15:28:56][WARNING] [Loader] Brak danych do przetworzenia w pliku fake_path.parquet
+[2025-06-27 15:28:56][INFO] Start analizy równoległej (12 CPU)...
+[2025-06-27 15:28:57][INFO] [Loader] Wczytano 2964624 wierszy z pliku: data/raw/yellow_tripdata_2024-01.parquet
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 1 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 2 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 3 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 4 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 5 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 6 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 7 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 8 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 9 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 10 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 11 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 12 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 13 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 14 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 15 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 16 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 17 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 18 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 19 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 20 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 21 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 22 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 23 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 24 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 25 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 26 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 27 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 28 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 29 załadowany (100000 wierszy)
+[2025-06-27 15:28:57][INFO] [Loader] Chunk 30 załadowany (64624 wierszy)
+[2025-06-27 15:28:57][INFO] Załadowano 30 chunków.
+[2025-06-27 15:28:59][INFO] Analiza zakończona sukcesem. Raporty zapisane.
+[2025-06-27 15:28:59][INFO] Start analizy równoległej (12 CPU)...
+[2025-06-27 15:28:59][ERROR] [Loader] Błąd podczas wczytywania pliku data/raw/nonexistent_file.parquet: [Errno 2] No such file or directory: 'data/raw/nonexistent_file.parquet'
+[2025-06-27 15:28:59][INFO] Załadowano 0 chunków.
+[2025-06-27 15:28:59][ERROR] Błąd podczas analizy multiprocessing: No objects to concatenate
+[2025-06-27 15:38:36][INFO] Uruchamianie aplikacji DataLab
+[2025-06-27 15:38:36][WARNING] Brakuje plików wyjściowych – wykonuję pipeline.
+[2025-06-27 15:38:36][INFO] Uruchamiam pipeline...
+[2025-06-27 15:38:36][INFO] [Loader] Wczytano 2964624 wierszy z pliku: data/raw/yellow_tripdata_2024-01.parquet
+[2025-06-27 15:38:36][INFO] [Loader] Chunk 1 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] Start analizy równoległej (12 CPU)...
+[2025-06-27 15:38:37][INFO] [Loader] Wczytano 2964624 wierszy z pliku: data/raw/yellow_tripdata_2024-01.parquet
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 1 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 2 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 3 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 4 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 5 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 6 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 7 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 8 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 9 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 10 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 11 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 12 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 13 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 14 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 15 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 16 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 17 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 18 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 19 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 20 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 21 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 22 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 23 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 24 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 25 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 26 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 27 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 28 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 29 załadowany (100000 wierszy)
+[2025-06-27 15:38:37][INFO] [Loader] Chunk 30 załadowany (64624 wierszy)
+[2025-06-27 15:38:37][INFO] Załadowano 30 chunków.
+[2025-06-27 15:38:41][INFO] Analiza zakończona sukcesem. Raporty zapisane.
+[2025-06-27 15:38:42][INFO] [Loader] Wczytano 2964624 wierszy z pliku: data/raw/yellow_tripdata_2024-01.parquet
+[2025-06-27 15:38:42][INFO] [Loader] Chunk 1 załadowany (100000 wierszy)
+[2025-06-27 15:38:42][INFO] [Cleaner] Chunk: 100000 → 95764 rekordów po walidacji | RAM: 1180.20 MB
+[2025-06-27 15:38:42][INFO] [Loader] Chunk 2 załadowany (100000 wierszy)
+[2025-06-27 15:38:42][INFO] [Cleaner] Chunk: 100000 → 96166 rekordów po walidacji | RAM: 1195.44 MB
+[2025-06-27 15:38:43][INFO] Pipeline zakończony pomyślnie.
+[2025-06-27 15:38:43][INFO] Odpalam Streamlit...
+[2025-06-27 17:33:00][INFO] Uruchamianie aplikacji DataLab
+[2025-06-27 17:33:00][WARNING] Brakuje plików wyjściowych – wykonuję pipeline.
+[2025-06-27 17:33:00][INFO] Uruchamiam pipeline...
+[2025-06-27 17:33:00][INFO] [Loader] Wczytano 2964624 wierszy z pliku: data/raw/yellow_tripdata_2024-01.parquet
+[2025-06-27 17:33:00][INFO] [Loader] Chunk 1 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] Start analizy równoległej (12 CPU)...
+[2025-06-27 17:33:01][INFO] [Loader] Wczytano 2964624 wierszy z pliku: data/raw/yellow_tripdata_2024-01.parquet
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 1 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 2 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 3 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 4 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 5 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 6 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 7 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 8 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 9 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 10 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 11 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 12 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 13 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 14 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 15 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 16 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 17 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 18 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 19 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 20 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 21 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 22 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 23 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 24 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 25 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 26 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 27 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 28 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 29 załadowany (100000 wierszy)
+[2025-06-27 17:33:01][INFO] [Loader] Chunk 30 załadowany (64624 wierszy)
+[2025-06-27 17:33:01][INFO] Załadowano 30 chunków.
+[2025-06-27 17:33:05][INFO] Analiza zakończona sukcesem. Raporty zapisane.
+[2025-06-27 17:33:06][INFO] [Loader] Wczytano 2964624 wierszy z pliku: data/raw/yellow_tripdata_2024-01.parquet
+[2025-06-27 17:33:06][INFO] [Loader] Chunk 1 załadowany (100000 wierszy)
+[2025-06-27 17:33:06][INFO] [Cleaner] Chunk: 100000 → 95764 rekordów po walidacji | RAM: 1202.19 MB
+[2025-06-27 17:33:06][INFO] [Loader] Chunk 2 załadowany (100000 wierszy)
+[2025-06-27 17:33:06][INFO] [Cleaner] Chunk: 100000 → 96166 rekordów po walidacji | RAM: 1217.23 MB
+[2025-06-27 17:33:08][INFO] Pipeline zakończony pomyślnie.
+[2025-06-27 17:33:08][INFO] Odpalam Streamlit...

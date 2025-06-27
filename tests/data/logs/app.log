@@ -1,0 +1,4 @@
+[2025-06-27 15:38:29][INFO] Start analizy równoległej (12 CPU)...
+[2025-06-27 15:38:29][ERROR] [Loader] Błąd podczas wczytywania pliku data/raw/nonexistent_file.parquet: [Errno 2] No such file or directory: 'data/raw/nonexistent_file.parquet'
+[2025-06-27 15:38:29][INFO] Załadowano 0 chunków.
+[2025-06-27 15:38:30][ERROR] Błąd podczas analizy multiprocessing: No objects to concatenate
